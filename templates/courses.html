@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Courses
+{% endblock %}
+
+{% block header %}
+  <hr class="d-none d-lg-block" />
+  <!-- Header Section -->
+  <header class="py-4 pt-5">
+    <div class="container">
+      <h1>Courses</h1>
+      <h2>Learn Quran Online with Tajweed</h2>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container" bis_skin_checked="1">
+      <div class="row" bis_skin_checked="1">
+        <div class="col-sm-12 col-md-12" bis_skin_checked="1">
+          <p class="taj aos-init aos-animate" style="font-size: 15px;" data-aos="fade-up">Reciting Quran e Kareem in proper Tajweed is important. QoT provides a detailed Tajweed course in which students will learn the rules of recitation like Qalqasa, Gunnah, Ismul Jalala, etc.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="row">
+        {% for course in courses %}
+          <div class="col-md-4">
+            <div class="card-custom">
+              <img width="60px" height="60px" src="{{ course.image.url }}" alt="Book Icon" />
+              <h3>{{ course.course_name }}</h3>
+              <p>{{ course.course_description|safe }}</p>
+              <button>{{ course.button_title }}</button>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mt-5 mb-3 interested">
+          <h1 class="heading color-sc">Are you interested in</h1>
+          <h2 class="mb-4"><strong class="color-pc">Trial Session?</strong></h2>
+
+          <p>You can try our Free Trial Session, No Obligation Lessons to Evaluate our Quran Reading Service & Teachers.</p>
+          <a class="btn btn-primary btn-rounded mt-1 btn">Start Free Trial Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -7,7 +7,7 @@
 }
 
 p {
-  font-size: 13px;
+  font-size: 15px;
 }
 
 a {
@@ -102,7 +102,9 @@ h6 {
 
 .image-shadow {
   border-radius: 20px;
-
+  height: 500px;
+  overflow-y: auto !important;
+  margin-top: 15px;
 }
 
 .mapimg {
@@ -243,7 +245,6 @@ h6 {
 }
 
 .imgtext {
-
   gap: 20px;
 }
 
@@ -264,10 +265,75 @@ h6 {
   border: 1px solid #ddd;
   border-radius: 8px;
   margin: 16px 0 16px 0;
-  padding: 45px;
+  padding: 20px 45px;
   text-align: center;
   box-shadow: 0 0 60px -40px rgba(0, 0, 0, .75);
-  border-radius: 12%;
+  border-radius: 6%;
+  height: 550px;
+  overflow-y: auto;
+}
+
+/* Styles for the scrollbar */
+.card-custom::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track (the background) */
+.card-custom::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.card-custom::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 6px;
+}
+
+/* On hover, add a darker color to the scrollbar handle */
+.card-custom::-webkit-scrollbar-thumb:hover {
+  background: #c6c6c6;
+}
+
+/* Styles for the scrollbar */
+.image-shadow::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track (the background) */
+.image-shadow::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.image-shadow::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 6px;
+}
+
+/* On hover, add a darker color to the scrollbar handle */
+.image-shadow::-webkit-scrollbar-thumb:hover {
+  background: #c6c6c6;
+}
+
+/* Styles for the scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (the background) */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle (the draggable part of the scrollbar) */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+/* On hover, add a darker color to the scrollbar handle */
+body::-webkit-scrollbar-thumb:hover {
+  background: #c6c6c6;
 }
 
 .card-custom img {
@@ -283,9 +349,14 @@ h6 {
 }
 
 .card-custom p {
-  font-size: 11.7px;
+  font-size: 14px;
   line-height: 23.4px;
   color: #555;
+}
+
+.card-custom li {
+  font-size: 14px;
+  list-style-type: disc;
 }
 
 .card-custom button {
@@ -311,4 +382,210 @@ h6 {
   background-color: #d8b600;
   border-color: #d8b600;
   border-radius: 50px;
+}
+
+
+.package .heading {
+  display: block;
+  width: 100%;
+  color: #fff;
+  padding: 5em 0 6em 0;
+  background-image: url('https://learnquran.com.au/vendor/local/imgs/bgs/package-header.svg');
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+}
+
+.aic {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.df {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fdc {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.image-shadow,
+.img-shadow {
+  -webkit-box-shadow: 0 0 60px -40px rgba(0, 0, 0, .75);
+  box-shadow: 0 0 60px -40px rgba(0, 0, 0, .75);
+}
+
+.half-rounded {
+  border-radius: 2em;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.tick li {
+  padding: 8px 0 0 30px;
+  background: url('https://learnquran.com.au/vendor/local/imgs/icons/check-golden.svg') no-repeat left 10px;
+  background-size: 15px 15px;
+}
+
+a.btn {
+  padding: 10px 30px;
+  font-size: 1em;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #185285;
+  border-color: #185285;
+}
+
+
+.policy-section {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policy-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+.policy-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.policy-section li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.policy-section li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+}
+
+.policy-section p {
+  margin-bottom: 1rem;
+}
+
+.Card {
+  margin: auto;
+  align-items: center;
+}
+
+.cardimg {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50px;
+}
+
+.Section2 {
+  background-image: url("images/video-bg-mid.webp");
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  padding: 5em 0;
+
+}
+
+.Section1 {
+  align-items: center;
+}
+
+.section3 {
+
+  max-width: 1140px !important;
+  align-items: center;
+  margin: auto;
+}
+
+
+.section5 {
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.buttonsec {
+  padding: 10px 25px 10px 25px;
+  border-radius: 30px;
+  background-color: #d8b600;
+  color: white;
+  border: 1px solid #d8b600;
+  float: right;
+  margin-top: 30px;
+}
+
+.section4 {
+  align-items: center;
+  max-width: 1040px;
+  margin: auto;
+
+}
+
+.para1 {
+  margin-top: 70px
+}
+
+.slide {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.bluebg {
+  background-image: url("images/bluebg.webp");
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin-bottom: 20px;
+  height: 200px;
+}
+
+.icon-box:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box i {
+  font-size: 3rem;
+  color: #212529;
+  margin-right: 15px;
+}
+
+.icon-box p {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  text-align: center;
 }

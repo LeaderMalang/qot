@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Packages
+{% endblock %}
+
+{% block header %}
+  <hr class="d-none d-lg-block" />
+  <!-- Header Section -->
+  <header class="py-4 pt-5">
+    <div class="container">
+      <h1>Packages</h1>
+      <h2>Learn Quran Online with Tajweed</h2>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
+  <section>
+    <div class="container mt-4" bis_skin_checked="1">
+      <div class="row" bis_skin_checked="1">
+        <div class="col-sm-12 col-md-12" bis_skin_checked="1">
+          <p class="taj aos-init aos-animate" style="font-size: 13px;" data-aos="fade-up">Learn Quran Online recitation with Tajweed. We designed special courses for kids to teach them Noorani Qauida, identification of Arabic Alphabets, Harakaat, Kasra (Zair), Dammah (Paish), Sakoon (Jazam, Maddah and leen letters, Learn standing Fatha, Kasra and Dammah, Learn Shaddah, Learn Madd, Learn Tanween, Learn Idgham, Learn Iqlab, Learn Ikhfa, Learn rules of Meem sakin.</p>
+          <p class="taj aos-init aos-animate" style="font-size: 13px;" data-aos="fade-up">We provide Online quran tutors (Qaarias and Qari’s) to teach quran to students of all ages. Learn Quran with Tajweed. Our trained teachers provide best training of quran with tajweed. Online quran lessons are designed to teach recitation of quran in minimum time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-3">
+      <div class="row" bis_skin_checked="1">
+        {% for package in packages %}
+          <div class="col-sm-12 col-md-3 mb-2">
+            <div class="image-shadow half-rounded df aic jac fdc text-center bg-wc package pb-4" bis_skin_checked="1">
+              <h5 class="heading m-0">{{ package.price }} <sub>per Month</sub></h5>
+              <style>
+                ul {
+                  padding: 0 20px;
+                }
+                ol {
+                  padding-left: 0;
+                }
+                ol li {
+                  list-style: none;
+                  text-align: left !important;
+                  font-weight: 200;
+                  font-size: 13px;
+                }
+                ul p {
+                  margin: 1rem 0;
+                  text-decoration: underline;
+                }
+              </style>
+              <h6 class="color-sc mt1 mb2">{{ package.duration }}</h6>
+              <ul class="tick" style="list-style: none;">{{ package.features_lists|safe }}</ul>
+              <a href="" class="btn btn-secondary btn-rounded mb-2 mt-2">Book Now</a>
+            </div>
+          </div>
+        {% endfor %}
+        <div class="row d-none d-lg-block aos-init" data-aos="fade-up" bis_skin_checked="1">
+          <div class="d-flex justify-content-center" bis_skin_checked="1">
+            <img src="{% static 'images/we-accept-payments-logos.png' %}" class="w-50 mr-auto ml-auto" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .badge-custom {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: green;
+        color: white;
+      }
+    </style>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card" style="height: 170px;">
+            <div class="card-header position-relative">
+              <h4 class="card-title">Weekend Special Discount</h4>
+              <span class="badge badge-custom">Discount</span>
+            </div>
+            <div class="card-body">
+              <p>
+                <strong>For Saturdays and Sundays:</strong>
+              </p>
+              <p>$40 Monthly applicable for classes on weekends only</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card" style="height: 170px;">
+            <div class="card-header position-relative">
+              <h4 class="card-title">Special Tarbiyah Programs</h4>
+              <span class="badge badge-custom">New</span>
+            </div>
+            <div class="card-body">
+              <p>Tailored programs designed to cater specifically to the needs of females and students, focusing on personal and spiritual development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <div class="policy-section">
+        <div class="container">
+          <h2>Payment Policies</h2>
+          <ul>
+            <li>The affordable Quran learning fees are charged on a monthly basis. Public holidays and Eid Holidays are paid, and there will be no refund for these off days.</li>
+            <li>Low-income families are offered a 10% discount.</li>
+            <li>We charge you after you complete the trial class and at the time of joining the regular classes as per the chosen course.</li>
+            <li>Payment methods: we accept debit/credit card payment or via Payoneer/Paypal.</li>
+            <li>In the Online Quran learning fees, Eid Holidays are included in the monthly fees of the students and there is no refund for that.</li>
+            <li>
+              <em>*A nominal one-time registration fee will be applied for the first time.</em>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,5 @@
+distro==1.8.0
+Django==5.0
+django-ckeditor==6.7.1
+django-environ==0.11.2
+Pillow==10.1.0

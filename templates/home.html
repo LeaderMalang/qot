@@ -1,0 +1,252 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block header %}
+  <hr class="d-none d-lg-block" />
+
+  <!-- Slide Section -->
+  <div class="slide">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex" style="gap: 70px; margin-top: 50px">
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="p-4">
+                <div class="d-flex">
+                  <img style="width: 20%; align-items: center" src="{% static 'images/left_quote.svg' %}" alt="" />
+                  <h2 class="arabic color-pc">قال النبي محمد (صلى الله عليه وسلم): "خيركم من تعلم القرآن وعلمه". (صحيح البخاري، الكتاب 61، الحديث 545)</h2>
+                </div>
+                <h4 style="font-size: 20px; padding-top: 20px">The Prophet Muhammad (peace be upon him) said: "The best among you are those who learn the Quran and teach it." (Sahih al-Bukhari, Book 61, Hadith 545)</h4>
+                <div class="pt-5" style="">
+                  <a style="color: rgb(235, 207, 50)" href="/packages/">Our Package</a>
+                  <a style="color: black; padding: 15px 65px 15px 65px; background-color: #185285; color: white; border-radius: 40px; margin-left: 30px;" href="">Request Demo Classes</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img style="width: 75%" src="{% static 'images/slide3.webp' %}" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex" style="gap: 70px; margin-top: 50px">
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="p-4">
+                <div class="d-flex">
+                  <img style="width: 20%; align-items: center" src="{% static 'images/left_quote.svg' %}" alt="" />
+                  <h2 class="arabic color-pc">عَلِّمُوا الصَّبِيَّ الصَّلَاةَ ابْنَ سَبْعِ سِنِينَ وَاضْرِبُوهُ عَلَيْهَا ابْنَ عَشْرٍ</h2>
+                </div>
+                <h1 style="font-size: 32px; padding-top: 50px">The best amongst you is the one who learns the Qur'an and teaches it.</h1>
+                <div class="pt-5" style="">
+                  <a style="color: rgb(235, 207, 50)" href="">Our Package</a>
+                  <a style="
+												color: black;
+												padding: 15px 65px 15px 65px;
+												background-color: #185285;
+												color: white;
+												border-radius: 40px;
+												margin-left: 30px;
+											" href="">Request Demo Classes</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <img style="width: 75%" src="{% static 'images/slide2.webp' %}" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex" style="gap: 70px; margin-top: 50px">
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="p-4">
+                <div class="d-flex">
+                  <img style="width: 100px; align-items: center" src="{% static 'images/left_quote.svg' %}" alt="" />
+                  <h2 class="arabic color-pc">إن أفضلكم من تعلم القرآن وعلمه</h2>
+                </div>
+                <h1 style="font-size: 32px; padding-top: 50px">Teach a child to pray, at the age of seven, and punish him for refusing it at ten.</h1>
+                <div class="pt-5" style="">
+                  <a style="color: rgb(235, 207, 50)" href="">Our Package</a>
+                  <a style="
+												color: black;
+												padding: 15px 65px 15px 65px;
+												background-color: #185285;
+												color: white;
+												border-radius: 40px;
+												margin-left: 30px;
+											" href="">Request Demo Classes</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <img style="width: 75%" src="{% static 'images/slide1.webp' %}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="bluebg">
+    <div class="d-flex" style="
+					max-width: 1100px;
+					margin: auto;
+					align-items: center;
+					gap: 20px;
+					padding-top: 50px;
+				">
+      <div>
+        <img style="width: 40vw" src="{% static 'images/boy-memorize-quran-online.webp' %}" alt="" />
+      </div>
+      <div>
+        <h2 style="color: rgb(223, 175, 19)">Welcome to Quran o Tarbiyah in an Interactive Way</h2>
+        <p class="text-light">Quranotarbiyah understands that raising children with a strong foundation in divine knowledge is a significant responsibility for every Muslim parent. While this responsibility primarily lies with the parents, we at Quranotarbiyah are dedicated to sharing this important duty with the Muslim community. Our commitment is not just a claim; we genuinely understand its significance. We take full responsibility for ensuring excellent Quranic education outcomes.</p>
+
+        <p class="text-light">Our approach to achieving these exceptional results involves slow but carefully planned steps that ensure a deep understanding of Quranic verses. By guiding your child step by step, we help them reach the highest level where they can read the Quran online with Tajweed.</p>
+
+        <p class="text-light">We not only guarantee high-quality learning but also prioritize your comfort. Learning the Quran becomes a lot easier with us, thanks to the convenience of home-based learning, flexible timings, parental supervision, and the guidance of expert Quran teachers. Quranotarbiyah is committed to providing an exceptional learning experience.</p>
+
+        <button class="button1 w-50 p-2">Send Request</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h4 style="padding-top: 40px; color: rgb(236, 203, 11)">A few reasons why we might be the right fit</h4>
+
+    <div class="d-flex" style="gap: 40px;">
+      <div>
+        <div class="d-flex mt-5" style="gap: 70px">
+          <div>
+            <img style="width: 50px" src="{% static 'images/clock.svg' %}" alt="" />
+          </div>
+          <div>
+            <h6 style="color: rgb(236, 203, 11); font-size: 19px">Round-the-Clock Learning Support</h6>
+            <p>We offer 24/7 service for Quran learning, providing continuous support to help students learn quickly and smoothly.</p>
+          </div>
+        </div>
+        <div class="d-flex mt-2" style="gap: 70px">
+          <div>
+            <img style="width: 50px" src="{% static 'images/quran-teacher.svg' %}" alt="" />
+          </div>
+          <div>
+            <h6 style="color: rgb(236, 203, 11); font-size: 19px">Personalized Online Quran Sessions</h6>
+            <p>Experience one-on-one online Quran learning sessions tailored to you and your family's needs, ensuring a comfortable and effective learning journey.</p>
+          </div>
+        </div>
+        <div class="d-flex mt-2" style="gap: 70px">
+          <div>
+            <img style="width: 50px" src="{% static 'images/staff.svg' %}" alt="" />
+          </div>
+          <div>
+            <h6 style="color: rgb(236, 203, 11); font-size: 23px">Expert Female Tutors</h6>
+            <p>Benefit from our highly qualified and dedicated female tutors, committed to transmitting the essence of the Holy Quran with care and expertise.</p>
+            <button style="padding: 10px 60px 10px 60px; background-color: rgb(7, 66, 143); color: white; border: 1px solid rgb(8, 70, 151); border-radius: 30px; margin-top: 20px;">Send Request</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img style="width: 40vw" src="{% static 'images/slideboy.webp' %}" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="Section2 my-5">
+    <div class="d-flex section3">
+      <div class="Section1" style="width: 50%;">
+        <p class="text-light">We've tailored our courses to accommodate the diverse needs of our esteemed students. Whether they're children taking their first steps in Quranic education or adults seeking to deepen their understanding, we've crafted specialized courses with their age and abilities in mind.</p>
+
+        <p class="text-light">For children and beginners, we offer specialized courses that commence with Noorani Qaida, a renowned guide for Quranic reading fundamentals. Adults, on the other hand, require a distinct approach, which we meticulously provide. Our emphasis on Tajweed is unwavering, integrated seamlessly from the outset. Our teachers diligently assist students in mastering proper pronunciation from day one, fostering an intuitive grasp of Tajweed as they progress. To make our students comprehend and implement the teachings of the Quran we also have an additional course in Tafseer to understand the meaning of the verses from the Holy Quran.</p>
+
+        <button class="buttonsec">Get Started</button>
+      </div>
+
+      <div style="width: 40%; margin-left: auto;">
+        <img style="width: 100%" src="{% static 'images/austrailan-girl-learning-online-quran.webp' %}" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <!-- Section 1 -->
+    <section class="mb-5">
+      <h2 class="section-title">Our Quran Courses</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-book"></i>
+            <p>We've introduced a Quran reading course tailored specifically for adults, which has garnered acclaim among our older learners.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-person-video3"></i>
+            <p>Our experienced online Quran tutors meticulously guide students through the Quran, focusing on word-by-word comprehension to ensure effective learning.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-clock"></i>
+            <p>Ample time is allocated for students to absorb new Quranic vocabulary, ensuring a thorough understanding.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-translate"></i>
+            <p>We also offer an online course in learning the Arabic language to help in understanding the Quran in a better way and to improve one’s linguistic and writing skills in Arabic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section>
+      <h2 class="section-title">Our Approach and Additional Courses</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-person"></i>
+            <p>We provide Tarbiyah with Sunnah lessons based on Islamic teachings from the ‘Seerah’ of our beloved Prophet (SAW) and from the Quranic scriptures.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-laptop"></i>
+            <p>Understanding the unique dynamics of online teaching, we've structured our courses to foster an optimal virtual learning environment.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-person-badge"></i>
+            <p>All our Quranic courses are conducted on a one-to-one basis, allowing for personalized attention and ensuring students remain fully engaged throughout their lessons.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="icon-box">
+            <i class="bi bi-people"></i>
+            <p>We cater to various age groups, learning methodologies, and preferences, offering a comprehensive range of courses including Noorani Qaida, Quran Reading, Advanced Tajweed, Learning Arabic Language, Quranic Translation (Tafseer) and Lessons on Tarbiyah.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock %}

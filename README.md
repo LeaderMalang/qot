@@ -1,6 +1,7 @@
-# Project Name
+# Qot (https://quranotarbiyah.com/)
 
-A brief description of what your project does and its purpose.
+Let's start learning Quran with us!
+Begin your Quranic journey with Quranotarbiyah, a pioneering institution that revolutionized online Quranic education in 2006. Our mission is to disseminate knowledge about Islam and the Quran worldwide. With a curriculum tailored to accommodate learners of all ages, we welcome students from every corner of the globe.
 
 ## Table of Contents
 
@@ -52,10 +53,13 @@ Follow these steps to set up the project on your local machine:
     your server will run on "http://127.0.0.1:8000/"
     ```
 ## Admin Access
-    ```sh
+
+    
     "http://127.0.0.1:8000/admin/"
-    credentials:
-    username: admin
-    password: admin
-    ```
+
+    credentials
+    username admin
+    password admin
+
+    
 

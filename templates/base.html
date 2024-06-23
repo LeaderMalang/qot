@@ -45,16 +45,55 @@
               </li>
             </ul>
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                {% if request.user.is_authenticated %}
+              {% if request.user.is_authenticated %}
+                <li class="nav-item">
                   <a class="nav-link text-white" href="/logout/">Logout</a>
-                {% else %}
+                </li>
+              {% else %}
+                <li class="nav-item">
                   <a class="nav-link text-white" href="/login/">Log In</a>
-                {% endif %}
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="https://api.whatsapp.com/send/?phone=923124930000&text&type=phone_number&app_absent=0">Live Chat</a>
-              </li>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#signupModal">Signup</a>
+                </li>
+              {% endif %}
+              <style>
+                .modal-header {
+                  background-color: rgb(7, 66, 143);
+                  color: white;
+                }
+                .modal-header .close {
+                  color: white;
+                  font-size: 25px;
+                  text-align: right;
+                  background-color: transparent;
+                  border: none;
+                  width: 100%;
+                }
+                .modal-body {
+                  text-align: center;
+                }
+                .modal-body button {
+                  margin-top: 15px;
+                }
+              </style>
+
+              <!-- Modal structure -->
+              <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="signupModalLabel">Signup</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Please select your role to signup:</p>
+                      <button type="button" class="btn btn-primary btn-block" onclick="window.location.href='/student_form/'">Signup as Student</button>
+                      <button type="button" class="btn btn-secondary btn-block" onclick="window.location.href='/teacher_form/'">Signup as Teacher</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </ul>
           </div>
         </div>

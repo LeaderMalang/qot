@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teacher Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      .required::after {
+        content: '*';
+        color: red;
+        margin-left: 2px;
+      }
+      .form-section {
+        margin-top: 20px;
+      }
+      label {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h3>Teacher Form</h3>
+      <form method="post" action="/teacher_form/" id="teacherForm">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="firstName" class="required">First Name</label>
+            <input type="text" class="form-control" id="firstName" name="teacher_first_name" placeholder="First Name" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lastName" class="required">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="teacher_last_name" placeholder="Last Name" />
+          </div>
+        </div>
+        <h5>Contact Information</h5>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="email" class="required">Email</label>
+            <input type="email" name="teacher_email" class="form-control" id="email" placeholder="Email" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" name="teacher_number" class="form-control" id="phoneNumber" placeholder="Phone Number" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="streetAddress">Street Address</label>
+          <input type="text" name="teacher_street_address" class="form-control" id="streetAddress" placeholder="Street Address" />
+        </div>
+        <div class="form-group">
+          <label for="addressLine2">Address Line 2</label>
+          <input type="text" name="teacher_address_line" class="form-control" id="addressLine2" placeholder="Address Line 2" />
+        </div>
+        <div class="form-group">
+          <label for="country" class="required">Country of Residence</label>
+          <select class="form-control" id="country" name="teacher_country">
+            <option>Select Country</option>
+            <option>USA</option>
+            <option>Canada</option>
+            <option>UK</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="city">City</label>
+            <input name="teacher_city" type="text" class="form-control" id="city" placeholder="City" />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="state">State/Province/Region</label>
+            <input name="teacher_state" type="text" class="form-control" id="state" placeholder="State/Province/Region" />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="zipCode">Zip/Postal Code</label>
+            <input name="teacher_zip" type="text" class="form-control" id="zipCode" placeholder="Zip/Postal Code" />
+          </div>
+        </div>
+        <div class="form-section">
+          <h5>Additional Information</h5>
+          <div class="form-group">
+            <label for="spouseName">Spouse Name</label>
+            <input name="teacher_spouse_name" type="text" class="form-control" id="spouseName" placeholder="(If no spouse, please leave blank)" />
+          </div>
+          <div class="form-group">
+            <label for="countryOrigin">From which country?</label>
+            <select name="teacher_from_country" class="form-control" id="countryOrigin">
+              <option>Select Country</option>
+              <option>USA</option>
+              <option>Canada</option>
+              <option>UK</option>
+              <!-- Add more countries as needed -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="countryOrigin">Educational Experience All That Apply</label>
+            <select name="teacher_education_experience_select" class="form-control" id="countryOrigin">
+              <option>Select Country</option>
+              <option>USA</option>
+              <option>Canada</option>
+              <option>UK</option>
+              <!-- Add more countries as needed -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="educationDetails">Provide details about your educational background.</label>
+            <textarea name="teacher_education_details" class="form-control" id="educationDetails" rows="3" placeholder="Provide details about your educational background."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="positionInterest" style="font-weight: bold">Position Of Interest</label>
+            <p style="color: gray">Select All that Apply</p>
+            <select name="teacher_position_interest" class="form-control" id="positionInterest">
+              <option>Select Position</option>
+              <option>Teacher</option>
+              <option>Administrator</option>
+              <option>Support Staff</option>
+              <!-- Add more positions as needed -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="hearAbout" style="font-weight: bold">How did you hear about Quran O Tarbiyah</label>
+            <select name="teacher_hear_about" class="form-control" id="hearAbout">
+              <option>Select Source</option>
+              <option>Website</option>
+              <option>Social Media</option>
+              <option>Friend/Family</option>
+              <!-- Add more sources as needed -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="comments">Other Comments (Optional)</label>
+            <textarea name="teacher_other_comments" class="form-control" id="comments" rows="3" placeholder="Provide details about your educational background."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="spouseName">password</label>
+            <input name="teacher_password" type="password" class="form-control" id="spouseName" placeholder="Enter Your Password" />
+          </div>
+        </div>
+        <button style="display: flex; justify-content: center; margin: auto" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

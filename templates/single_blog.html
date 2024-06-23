@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn Quran Academy Blog</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+
+    <style>
+        *{
+            font-family: "Montserrat", sans-serif !important;
+        }
+      .card {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-top: 20px;
+      }
+      
+      .card-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .card-text {
+        font-size: 14px;
+      }
+      
+      .list-group-item {
+        font-size: 14px;
+        padding: 8px 20px 8px 20px;
+      }
+      
+      .list-group-item {
+        border: none;
+        color: #027abb;
+        text-decoration: underline;
+      }
+      
+      .list-group-item:hover {
+        text-decoration: none;
+        color: #027abb;
+        background: transparent;
+      }
+      
+      .zak-entry-meta {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 10px;
+        border: 0 solid #e4e4e7;
+        font-size: 14px;
+        width: 100%;
+        max-width: 1250px;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="container">
+        <a class="navbar-brand" href="#">Learn Quran Academy Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-success text-white" href="#">Main Website</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 pt-5">
+            <div class="card">
+              <img class="card-img-top" src="{% static '1.jpg' %}" alt="Card image cap" />
+
+              <div class="card-body">
+                <h5 class="card-title">{{ blog.title }}</h5>
+
+                
+
+              <div class="zak-entry-meta mt-3">
+                <span class="zak-byline">
+                  By
+                  <span class="author vcard"><a class="url fn n" href="">admin</a></span>
+                </span><span class="zak-posted-on">
+                  Posted on
+                  <a href="#" rel="bookmark"><time class="" datetime="">June 30, 2016</time></a>
+                </span><span class="zak-cat-links">
+                  Posted in
+                  {% for category in blog.category.all %}
+                    <a href="{% url 'blog_list_by_category' category_id=category.id %}" rel="category">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}
+                {% endfor %}
+                </span>
+                <span class="zak-tags-links">
+                  Tagged
+                  {% for tag in blog.tag.all %}
+                  <a href="/tag/{{tag.id}}/" rel="tag">{{tag.name}}</a>{% if not forloop.last %}, {% endif %}
+                  {% endfor %}
+              </div>
+
+
+                <p id="description" class="card-text">{{ blog.description|safe }}</p>
+                <a href="/blog/{{ blog.id }}/" style="color: #3F3F46 !important; font-size: 14px;">Read More</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4" style="border-left: 1px solid #E4E4E7; padding-left: 6px;">
+          <div class="list-group pt-5">
+            <a class="list-group-item list-group-item-action text-dark" style="color: black; text-decoration: none; font-size: 17px; font-size: bold;">Recent Posts</a>
+            {% for blog in side_blogs %}
+            <a href="/blog/{{blog.id}}/" class="list-group-item list-group-item-action">{{blog.title}}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

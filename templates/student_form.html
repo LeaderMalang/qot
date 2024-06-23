@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      .required::after {
+        content: '*';
+        color: red;
+        margin-left: 2px;
+      }
+      .form-section {
+        margin-top: 20px;
+      }
+      label {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5" style="padding-bottom: 30px">
+      <h2>Students Form</h2>
+      <form action="/student_form/" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="emailAddress" class="required">Email Address</label>
+          <input name="student_email" type="email" class="form-control" id="emailAddress" placeholder="Email Address" />
+        </div>
+        <div class="form-group">
+          <label for="firstName" class="required">First Name</label>
+          <input name="student_first_name" type="text" class="form-control" id="firstName" placeholder="First Name" />
+        </div>
+        <div class="form-group">
+          <label for="lastName" class="required">Last Name</label>
+          <input name="student_last_name" type="text" class="form-control" id="lastName" placeholder="Last Name" />
+        </div>
+        <div class="form-group">
+          <label for="birthdate">Birthdate</label>
+          <input name="student_birthdate" type="text" class="form-control" id="birthdate" placeholder="Enter Your Birthdate" />
+        </div>
+        <div class="form-group">
+          <label for="package" class="required">Package</label>
+          <select class="form-control" id="package" name="student_package">
+            {% for package in packages %}
+              <option>{{ package.price }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="student_password" class="required">Password</label>
+          <input name="student_password" type="password" class="form-control" id="student_password" placeholder="Password" />
+        </div>
+        <h5>Address Information</h5>
+        <div class="form-group">
+          <label for="country" class="required">Country</label>
+          <select name="student_country" class="form-control" id="country">
+            <option>United States</option>
+            <option>Canada</option>
+            <option>UK</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="street" class="required">Street</label>
+          <input name="student_street" type="text" class="form-control" id="street" placeholder="Street" />
+        </div>
+        <div class="form-group">
+          <label for="city" class="required">City</label>
+          <input name="student_city" type="text" class="form-control" id="city" placeholder="City" />
+        </div>
+        <div class="form-group">
+          <label for="state" class="required">State</label>
+          <select name="student_state" class="form-control" id="state">
+            <option>United States</option>
+            <option>Canada</option>
+            <option>UK</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="zipCode" class="required">Postal Code</label>
+          <input name="student_postal_code" type="text" class="form-control" id="zipCode" placeholder="Zip Code" />
+        </div>
+        <div class="form-group">
+          <label for="mobileNumber" class="required">Mobile Number</label>
+          <input name="student_number" type="text" class="form-control" id="mobileNumber" placeholder="Mobile Number" />
+        </div>
+
+        <div class="form-group">
+          <label for="consent" class="required">By selecting "Yes" you consent to receive notification from the new school. Reply Stop to unsubscribe. Message & data rates may apply.</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="consent" id="consentYes" value="yes" />
+            <label class="form-check-label" for="consentYes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="consent" id="consentNo" value="no" />
+            <label class="form-check-label" for="consentNo">No</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="academic" class="required">Academic level</label>
+          <select name="student_academic" class="form-control" id="academic">
+            <option>United States</option>
+            <option>Canada</option>
+            <option>UK</option>
+            <!-- Add more countries as needed -->
+          </select>
+        </div>
+        <button style="display: flex; justify-content: center; margin: auto" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
